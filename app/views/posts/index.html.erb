@@ -2,7 +2,8 @@
 
 <h1>投稿一覧</h1>
 
-<% if user_signed_in? %> <!-- ユーザーがログインしているか調べる -->
+<% if user_signed_in? %>
+  <h2>現在 <%= current_user.name %> さんがログインしています </h2>
   <h4> メールアドレス： <%= current_user.email %> </h4>
   <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
 <% else %>
